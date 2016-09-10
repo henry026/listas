@@ -1,0 +1,48 @@
+using System;
+using System.Collections;
+public class SamplesQueue  {
+
+   public static void Main()  {
+
+      // Crear mi  el Queue.
+      Queue myQ = new Queue();
+      myQ.Enqueue( "El" );
+      myQ.Enqueue( "Primer" );
+      myQ.Enqueue( "elemento" );
+      myQ.Enqueue( "de cola" );
+
+      // Muestra el  Queue.
+      Console.Write( "Queue values:" );
+      PrintValues( myQ );
+
+      // Desencola el Queue.
+      Console.WriteLine( "(Dequeue)\t{0}", myQ.Dequeue() );
+
+      // Muestra el  Queue.
+      Console.Write( "Queue values:" );
+      PrintValues( myQ );
+
+      // Desencola otro elemento de la lista Queue.
+      Console.WriteLine( "(Dequeue)\t{0}", myQ.Dequeue() );
+
+      // Muestra el  Queue.
+      Console.Write( "Queue values:" );
+      PrintValues( myQ );
+
+      // Regresa al primer elemento de la cola sin eliminarlo.
+      Console.WriteLine( "(Peek)   \t{0}", myQ.Peek() );
+
+      //Muestra el Queque.
+      Console.Write( "Queue values:" );
+      PrintValues( myQ );
+   }
+
+   public static void PrintValues( IEnumerable myCollection )  {
+      foreach ( Object obj in myCollection )
+        	Console.Write( "    {0}", obj );
+      		Console.WriteLine();
+      		Console.WriteLine("");
+			Console.Write("Presiona para continuar . . . ");
+			Console.ReadKey(true);
+   }
+}
